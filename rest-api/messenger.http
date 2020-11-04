@@ -1,0 +1,18 @@
+GET http://localhost:3000/webhook?hub.verify_token=DFORGE_TOKEN&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe
+
+###
+
+POST http://localhost:3000/webhook
+Content-Type: application/json;
+
+{
+    "object": "page", 
+    "entry": [
+        {
+            "messaging": [
+                {"message": "TEST_MESSAGE"}
+            ]
+        }
+    ]
+}
+
